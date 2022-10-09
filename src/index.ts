@@ -23,7 +23,7 @@ export default {
 		}
 
 		const { searchParams } = new URL(request.url)
-		const asNumbers = searchParams.get('asns')?.split(/[ ,]+/).map(Number)
+		const asNumbers = searchParams.get('asns')?.split(/[ ;]+/).map(Number)
 
 		const ipv4RequestedParameter = searchParams.get('ipv4')?.toLowerCase().trim()
 		const ipv6RequestedParameter = searchParams.get('ipv6')?.toLowerCase().trim()
